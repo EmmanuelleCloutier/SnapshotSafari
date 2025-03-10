@@ -18,5 +18,9 @@
 				"Editor"
 			]
 		}
+	],
+	"AdditionalDependencies":[
+		"AIPerception", 
+		"AIModule"
 	]
 }
