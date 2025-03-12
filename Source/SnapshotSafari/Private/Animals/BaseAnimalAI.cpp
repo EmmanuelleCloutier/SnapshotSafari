@@ -54,7 +54,26 @@ void ABaseAnimalAI::WanderRandomly()
 			FVector RandomLocation;
 			if (NavSystem->K2_GetRandomReachablePointInRadius(GetWorld(), GetActorLocation(), RandomLocation, WanderRadius))
 			{
+				if (GEngine)
+				{
+					GEngine->AddOnScreenDebugMessage(
+					-1,                
+						5.0f,              
+						FColor::Green,    
+						TEXT("Location found in radius")  
+					);
+				}
+				
 				AIController->MoveToLocation(RandomLocation);
+				if (GEngine)
+				{
+					GEngine->AddOnScreenDebugMessage(
+					-1,                
+						5.0f,              
+						FColor::Green,    
+						TEXT("Moving to location")  
+					);
+				}
 			}
 		}
 	}
@@ -85,12 +104,32 @@ void ABaseAnimalAI::OnSeeOtherAnimal(AActor* OtherActor)
 		{
 			GroupLeader = OtherAnimal->GroupLeader;
 			GroupLeader->AddToGroup(this);
+
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(
+				-1,                
+					5.0f,              
+					FColor::Green,    
+					TEXT("is leader")  
+				);
+			}
 		}
 		else if (!GroupLeader && !OtherAnimal->GroupLeader) 
 		{
 			GroupLeader = this;
 			bIsGroupLeader = true;
 			AddToGroup(OtherAnimal);
+
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(
+				-1,                
+					5.0f,              
+					FColor::Green,    
+					TEXT("going to follow a leader")  
+				);
+			}
 		}
 	}
 }
@@ -118,6 +157,16 @@ void ABaseAnimalAI::UpdateGroupMovement()
 			FVector LeaderPosition = GroupLeader->GetActorLocation();
 			FVector Offset = FVector(FMath::RandRange(-50, 50), FMath::RandRange(-50, 50), 0); 
 			AIController->MoveToLocation(LeaderPosition + Offset);
+
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(
+				-1,                
+					5.0f,              
+					FColor::Green,    
+					TEXT("floacking")  
+				);
+			}
 		}
 	}
 }
