@@ -1,58 +1,58 @@
-Snapshot Safari
-General Concept
-The player takes on the role of an explorer traveling through different wild environments with the goal of discovering, photographing, and observing animals.
-However, they must remain vigilant: some carnivorous animals can attack. If caught, the player dies and must restart their exploration.
-The game combines free exploration, light survival mechanics, and photo collection, creating an immersive and playful experience.
+#  Snapshot Safari
 
-Core Features
-Exploration:
+**Snapshot Safari** is a small exploration and photography game created with Unreal Engine.  
+The player explores wild environments to discover, photograph, and observe animals — while avoiding dangerous predators.
 
-Two biomes will be available:
+---
 
-Forest: A dense, lush environment inhabited by a variety of animals.
+##  General Concept
 
-Savanna: An open, hot landscape populated with drought-adapted species.
+You play as an explorer traveling through vibrant biomes, aiming to build a photo collection of the local wildlife.  
+However, some carnivores roam the world and will attack if you get too close!  
+If caught, you will die and must restart your exploration.
 
-World Selection:
+Snapshot Safari blends **free exploration**, **light survival mechanics**, and **wildlife photography** for an immersive experience.
 
-From the main menu, players can choose which world they wish to explore.
+---
 
-Photo Mode:
+##  Features
 
-During gameplay, players can activate a "photo mode" to capture images of animals they encounter.
+- **Two Biomes**:
+  - **Forest**: A dense, green environment full of wildlife.
+  - **Savanna**: A vast, dry landscape populated with drought-adapted animals.
 
-Photos will be stored in an album accessible at any time.
+- **World Selection**  
+  Choose which biome to explore from the main menu.
 
-Death Management:
+- **Photo Mode**  
+  Activate the camera mode during gameplay to capture pictures of the animals you encounter.
 
-If attacked by a carnivore, the player "dies" and must restart exploration from a starting point.
+- **Death Management**  
+  Beware of carnivores! If you are caught, your death is recorded, and you restart from the beginning.
 
-The total number of deaths will be recorded and displayed, combining deaths across all worlds.
+- **Photo Album**  
+  View all your collected photos anytime, either from the in-game menu or the main menu.
 
-Photo Album:
+---
 
-Players can view all their captured photos via an album, available both from the menu and during gameplay.
+##  Technical Focus
 
-Technical Objectives
-This project aims to explore multiple development areas within Unreal Engine:
+This project was designed to practice and showcase:
 
-UI (User Interface):
-Creation of a main menu, an interactive photo album, and in-game indicators.
+- **User Interface (UI)**: Menu navigation, photo album, death counter.
+- **Basic AI**: Simple animal behaviors (patrolling, reacting to the player).
+- **Player Controls**: Smooth movement, camera control, and photo mode integration.
+- **Save System**: Storing photos and tracking death statistics.
 
-Basic AI:
-Simple behaviors for animals (movement, reactions to the player).
+---
 
-Player Controls:
-Smooth movement, camera management, and integration of the photo mode.
+##  Target Audience
 
-Simple Save System:
-Store taken photos and track death statistics.
+- Beginner to intermediate Unreal Engine developers learning open-world gameplay foundations.
+- Players who enjoy relaxed exploration and wildlife photography.
 
-Target Audience
-Beginner or intermediate developers looking to understand the basics of open-world gameplay in Unreal Engine.
+---
 
-Players who enjoy exploration and wildlife photography in immersive environments.
+##  Project Goal
 
-Project Ambition
-Create a small, complete, and enjoyable game that serves as a technical showcase for Unreal Engine’s fundamental features, while remaining simple and achievable.
-
+Deliver a **small**, **polished**, and **fully playable** game that highlights essential Unreal Engine features while remaining simple and fun.
